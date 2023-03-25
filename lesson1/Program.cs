@@ -106,7 +106,7 @@ while (i <= N)
 Console.WriteLine("Введите трехзначное число");
 int a= int.Parse(Console.ReadLine());
 
-if (a > 99 && a < 10000)
+if (a > 99 & a < 1000)
 {
     Console.WriteLine(a % 10);
 }
