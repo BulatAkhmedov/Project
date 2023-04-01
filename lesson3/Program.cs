@@ -101,12 +101,12 @@ return "0";
 ● A (3,6); B (2,1) -> 5,09
 ● A (7,-5); B (1,-1) -> 7,21
 */
-/*
+
 Console.WriteLine("Введите X1:");
 int x1 = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Введите Y1:");
-int x1 = int.Parse(Console.ReadLine());
+int y1 = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Введите X2:");
 int x2 = int.Parse(Console.ReadLine());
@@ -134,12 +134,12 @@ double GetDistance(int x1, int x2, int y1, int y2)
         return 0;
     }
 
-    double L = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(t2 - t1, 2));
+    double L = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
 
     return L;
 
 }
-*/
+
 
  /*
  Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел
@@ -147,7 +147,7 @@ double GetDistance(int x1, int x2, int y1, int y2)
 ● 5 -> 1, 4, 9, 16, 25.
 ● 2 -> 1,4
 */
-
+/*
 Console.WriteLine("Введите N:");
 int n = int.Parse(Console.ReadLine());
 
@@ -172,3 +172,4 @@ int GetSquare(int j)
     j = j * j;
     return j;
 }
+*/

@@ -26,8 +26,6 @@ else
     Console.WriteLine("Переменная не является палиндромом");
 }
 
-
-
 bool DefenitionPolynomial(string str)
 {
     bool status = false;
@@ -41,6 +39,7 @@ bool DefenitionPolynomial(string str)
         else
         {
             status = false;
+            return false;
         }
     }
     
