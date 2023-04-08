@@ -4,23 +4,49 @@
 */
 
 // Задаем размерность массива
-Console.WriteLine("Введите размерность массива:");
-int lenght = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите размерность массива:"); // вывод в консоль предложения ввести число
+int length = int.Parse(Console.ReadLine()); // ввод в консоль числа
 
 // Заполняем массив 
-int[] array = GenerateArray(lenght);
+int[] array = GenerateArray(length); // создание массива типа int и запись в него результата выполнения метода
+
+PrintArray(array);// вызов метода вывода массива в консоль
+
+Console.WriteLine($"Количество четных чисел в масиве равно {FindEvenNumbresArray(array)}"); // вывод в консоль
+
 
 // Вызываем метод создания массива и его заполнение случайными числами
-int[] GenerateArray(int lenght)
+int[] GenerateArray(int length)
 {
-    int[] array = new int[lenght];
+    int[] array = new int[length]; // создание массива типа int и размером равным переданному параметру
 
-    Random random = new Random();
+    Random random = new Random(); // создание переменной типа Random
 
-    for (int i = 0; i< lenght; i++)
+    for (int i = 0; i< length; i++) // цикл от i до length (размер массива)
     {
-        array[i] = random.Next(99, 1000);
+        array[i] = random.Next(99, 1000); // запись в массив случайного числа
     }
 
-    return array;
+    return array; // возврат массива как результат выполнения метода
+}
+
+//Метод определения количетсва четных чисел в массиве
+int FindEvenNumbresArray (int[] array)
+{
+    int a = 0; // создание переменной типа int и приравнивание ее к 0
+    for(int i = 0; i < array.Length; i++) // цикл от i до array.Length (размер массива)
+    {
+        if (array[i] % 2 == 0) // если остаток деления значения элемента массива на 2 равен 0 (число четное)
+        {
+            a++; // прибавляем к а единица
+        }
+    }
+
+    return a; // возврат переменной как результат выполнения метода
+}
+
+// метод вывода массива в консоль
+void PrintArray(int[] array)
+{
+    Console.WriteLine($"Массив: [{string.Join(", ", array)}]");
 }
