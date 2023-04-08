@@ -5,25 +5,26 @@
 5 -> 1, 8, 27, 64, 125
 */
 
-Console.WriteLine("Введите N:");
-int n = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите N:"); // Ввывод в консоль предложения ввести число
+int n = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-if (n == 0)
+if (n == 0) // если число равно 0
 {
-    Console.Write("n должно быть больше 0");
-    return;
+    Console.Write("n должно быть больше 0"); // вывод в консоль
+    return; // завершение выполнения программы
 }
 
-int[] array = new int[n];
-int i = 1;
+int[] array = new int[n]; // создание массива типа int с размером заданного числа
+int i = 1; // создание переменной типа int и приравнивание ее к 1
 
-while (i <= n)
+while (i <= n) // цикл от i до n (включительно)
 {
-    array[i-1] = GetSquare(i);
-    Console.WriteLine($"{i}, {array[i-1]}");
-    i++;
+    array[i-1] = GetSquare(i); // запись в 0 элемент массива результата выполнения метода
+    Console.WriteLine($"{i}, {array[i-1]}"); // вывод в консоль
+    i++; // увелчения итератора на 1
 }
 
+// метода типа int возвращающий куб переданного в него числа
 int GetSquare(int j)
 {
     j = j * j * j;

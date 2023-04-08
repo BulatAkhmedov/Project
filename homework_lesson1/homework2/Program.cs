@@ -5,25 +5,25 @@
 22 3 9 -> 22
 */
 
-Console.WriteLine("Введите число a");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число a"); // Вывод в консоль предложения ввести число
+int a = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-Console.WriteLine("Введите число b");
-int b = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число b"); // Вывод в консоль предложения ввести число
+int b = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-Console.WriteLine("Введите число c");
-int c = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число c"); // Вывод в консоль предложения ввести число
+int c = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-int max = a;
+int max = a; // создание переменной типа int и приравнивание ее к числу a введенному через консоль
 
-if (max < b)
+if (max < b) // если max меньше b
 {
-    max = b;
+    max = b; // если да приравниваем max к b
 }
 
-if (max < c)
+if (max < c) // если max меньше c
 {
-    max = c;
+    max = c; // если да приравниваем max к с
 }
 
-Console.WriteLine(max);
+Console.WriteLine(max); // вывод в консоль max

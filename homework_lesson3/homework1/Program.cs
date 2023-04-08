@@ -6,43 +6,44 @@
 23432 -> да
 */
 
-Console.WriteLine("Введите пятизначную переменную:");
-string str = Console.ReadLine();
+Console.WriteLine("Введите пятизначную переменную:"); // Вывод в консоль предложения ввести переменную
+string str = Console.ReadLine(); // ввод в консоль переменной
 
 // Данное условие введено только из-за условий задачи. Метод расчитан на переменную любой длины
-if (str.Length != 5)
+if (str.Length != 5) // проверка если перемення не пятизначное
 {
-    Console.WriteLine("Введена не пятизначная переменная");
-    return;
+    Console.WriteLine("Введена не пятизначная переменная"); // если не пятизначное вывод в консоль
+    return;// прекращение работы программы
 }
 
 
-if (DefenitionPolynomial(str))
+if (DefenitionPolynomial(str)) // если результат выполнение метода истина
 {
-    Console.WriteLine("Переменная является палиндромом");
+    Console.WriteLine("Переменная является палиндромом"); // если да вывод в консоль
 }
 else
 {
-    Console.WriteLine("Переменная не является палиндромом");
+    Console.WriteLine("Переменная не является палиндромом"); // если нет вывод в консоль
 }
 
+// Метод типа bool определения является ли переменная палиндромом
 bool DefenitionPolynomial(string str)
 {
-    bool status = false;
+    bool status = false; //создаем переменную типа bool и задаем что она ложь
 
-    for (int i = 0; i < (str.Length/2); i++)
+    for (int i = 0; i < (str.Length/2); i++) // цикл от i до str.Length/2 (длина строки деленная на 2)
     {
-        if (str[i] == str[str.Length - (i+1)])
+        if (str[i] == str[str.Length - (i+1)]) // если первый элемент строки равен последнему элементу строки
         {
-            status = true;
+            status = true; // если да записываем в переменную истина
         }
         else
         {
-            status = false;
-            return false;
+            status = false; // если нет записываем в переменную ложь 
+            return false; // возвращаем как результат метода ложь
         }
     }
     
-    return status;
+    return status; // возвращаем как результат метода истина
 
 }

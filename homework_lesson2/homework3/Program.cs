@@ -6,16 +6,16 @@
 1 -> нет
 */
 
-Console.WriteLine("Введите день недели:");
-int number = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите день недели:"); // вывод в консоль предложения задать числом день недели
+int number = int.Parse(Console.ReadLine()); // ввод в консоль числа
     
-switch(number)
+switch(number) // // условие выбора если number (введенный день недели)
 {
-    case 1:
-    Console.WriteLine("Понедельник не выходной");
+    case 1: // равен 1
+    Console.WriteLine("Понедельник не выходной"); // вывод в консоль
     break;
 
-    case 2:
+    case 2: // и т.д.
     Console.WriteLine("Вторник не выходной");
     break;
 
@@ -39,7 +39,7 @@ switch(number)
     Console.WriteLine("Воскресенье выходной");
     break;
 
-    default:
-    Console.WriteLine("День недели введен не правильно");
+    default: // во всех остальных случаях
+    Console.WriteLine("День недели введен не правильно"); // вывод в консоль
     break;
 }

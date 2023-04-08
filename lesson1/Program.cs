@@ -6,22 +6,22 @@ a = 2, b = 10 -> нет
 a = 9, b = -3 -> да
 a = -3 b = 9 -> нет
 
-Console.WriteLine("Программа определения является ли число а квадратом числа b");
+Console.WriteLine("Программа определения является ли число а квадратом числа b"); //Вывод в консоль описания функционаоа программы
 
-Console.WriteLine("Введите b");
-int b = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите b"); // Вывод в консоль предложения ввести число b
+int b = int.Parse(Console.ReadLine()); // Ввод в консоли числа b
 
-Console.WriteLine("Введите a");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите a"); // Вывод в консоль предложения ввести число a
+int a = int.Parse(Console.ReadLine()); // Ввод в консоли числа a
 
 
-if (a == (b * b))
+if (a == (b * b)) // проверяем являемтся ли a квадратом b
 {
-    Console.WriteLine("Число b является квадратом числа a");
+    Console.WriteLine("Число b является квадратом числа a"); // Если да
 }
 else
 {
-    Console.WriteLine("Число b не является квадратом числа a");
+    Console.WriteLine("Число b не является квадратом числа a"); // Если нет
 }
 */
 
@@ -32,10 +32,10 @@ else
 5 -> Пятница
 20 минут
 
-Console.WriteLine("Введите значене от 1 до 7");
-int a= int.Parse(Console.ReadLine());
+Console.WriteLine("Введите значене от 1 до 7"); // Вывод в консоль предложения ввести число а в диапазоне от 1 до 7
+int a= int.Parse(Console.ReadLine()); // Ввод в консоли числа а
 
-if (a == 1)
+if (a == 1) // если а = 1 то выводим в консоль понедельник
 {
     Console.WriteLine("Понедельник");
 }
@@ -72,7 +72,7 @@ if (a == 7)
 
 if (a > 1 | a > 7)
 {
-    Console.WriteLine("Нет такого дня");
+    Console.WriteLine("Нет такого дня"); // если а не попало в диапазон, то вывести что нет такого дня
 }
 */
 
@@ -83,15 +83,15 @@ if (a > 1 | a > 7)
 2 -> " -2, -1, 0, 1, 2"
 */
 /*
-Console.WriteLine("Введите число N");
-int N = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число N"); // Вывод в консоль предложения ввести число N
+int N = int.Parse(Console.ReadLine()); // Ввод в консоли числа N
 
-int i = -N;
+int i = -N; // Создаем переменную i в которую записываем значение -N
 
-while (i <= N)
+while (i <= N) // цикл (пока i меньше N)
 {
-    Console.WriteLine(i);
-    i = i + 1;
+    Console.WriteLine(i); // Выводим в консоль i
+    i = i + 1; // добавляем к i единицу
 
 }
 */
@@ -103,16 +103,16 @@ while (i <= N)
 918 -> 8
 */
 
-Console.WriteLine("Введите трехзначное число");
-int a= int.Parse(Console.ReadLine());
+Console.WriteLine("Введите трехзначное число"); // Вывод в консоль предложения ввести трехзначное число
+int a= int.Parse(Console.ReadLine()); // ввод в консоли трехзначное число
 
-if (a > 99 & a < 1000)
+if (a > 99 & a < 1000) // проверка а больше 99 и меньше 1000
 {
-    Console.WriteLine(a % 10);
+    Console.WriteLine(a % 10); // если да выводим в консоль остаток от деления а на 10 
 }
-else 
+else // если а не попало в диапозон от 100 до 999
 {
-    Console.WriteLine("Введите трехзначное число");
+    Console.WriteLine("Введите трехзначное число"); // вывод в консоль
 }
 
 

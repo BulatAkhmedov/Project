@@ -5,15 +5,15 @@
 7 -> нет
 */
 
-Console.WriteLine("Введите число ");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число "); // Вывод в консоль предложения ввести число
+int a = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-if (a % 2 == 0)
+if (a % 2 == 0) // если остаток от деления а на 2 равен 0
 {
-    Console.WriteLine("Число четное");
+    Console.WriteLine("Число четное"); // если да вывод в консоль
 }
 else
 {
-    Console.WriteLine("Число не четное");
+    Console.WriteLine("Число не четное"); // если нет вывод в консоль
 }
 

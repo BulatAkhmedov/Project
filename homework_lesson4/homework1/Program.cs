@@ -7,23 +7,24 @@
 
 */
 
-Console.WriteLine("Введите A:");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите A:"); // Вывод в консоль предложения ввести число
+int a = int.Parse(Console.ReadLine()); // введение в консоль числа
 
 Console.WriteLine("Введите B:");
 int b = int.Parse(Console.ReadLine());
 
-Console.WriteLine(ExponentiationAtoB(a, b));
+Console.WriteLine(ExponentiationAtoB(a, b)); // выводд в консоль результат выполнения метода
 
+//Метод типа int который возвращает число а возведенное в степень b
 int ExponentiationAtoB(int a, int b)
 {
-    int tmp = a;
+    int tmp = a; // создание переменной типа int и приравнивание ее к переданному параметру а
     
-    for(int i = 1; i < b; i++)
+    for(int i = 1; i < b; i++) // цикл от i до b
     {
-        a = a * tmp;
+        a = a * tmp; // возведение а в степень
     }
 
-    return a;
+    return a; // возврат а как результат метода
 
 }

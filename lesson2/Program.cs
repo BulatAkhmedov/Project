@@ -1,21 +1,21 @@
 ﻿/*
-Random random = new Random();
-int randomValue = random.Next(10, 100);
+Random random = new Random(); //создаем переменную random (тип переменной RANDOM), которая будет выводить случайное число в заданном диапазоне
+int randomValue = random.Next(10, 100); // создаем переменную типа int и записываем в нее случайное число
 
-int lastDigit = randomValue % 10;
-int firstDigit = randomValue / 10;
+int lastDigit = randomValue % 10; // создаем переменную типа int и записываем в нее остаток от деления случайного числа на 10 (последний элемент двузначного число)
+int firstDigit = randomValue / 10; // создаем переменную типа int и записываем в нее результат деления случайного числа на 10  (первый элемент двузначного числа)
 
-Console.WriteLine(randomValue);
-Console.WriteLine(lastDigit);
-Console.WriteLine(firstDigit);
+Console.WriteLine(randomValue); // выводим в консоль исходное случайное число
+Console.WriteLine(lastDigit); // выводим в консоль последний элемент исходного случайного числа
+Console.WriteLine(firstDigit); // выводим в консоль первый элемент исходного случайного числа
 
-if (lastDigit > firstDigit)
+if (lastDigit > firstDigit) // проверяме больше ли последний элемент чем первый
 {
-    Console.WriteLine(lastDigit);
+    Console.WriteLine(lastDigit); // если да выводим в консоль последний элемент
 }
 else
 {
-    Console.WriteLine(firstDigit);
+    Console.WriteLine(firstDigit); // если нет выводим первый элемент
 }
 */
 
@@ -26,14 +26,14 @@ else
 ● 918 -> 98
 */
 /*
-Random random = new Random();
-int num = random.Next(100, 1000);
+Random random = new Random(); // создаем переменную random (тип переменной RANDOM), которая будет выводить случайное число в заданном диапазоне
+int num = random.Next(100, 1000); // создаем переменную типа int и записываем в нее случайное число
 
-int first = num / 100;
-int last = num % 10;
+int first = num / 100; // создаем переменную типа int и запысываем в нее результат деления случайного числа на 100 (первый элемент случайного числа)
+int last = num % 10; // создаем переменную типа int и записываем в нее остаток от деления случайного числа на 10 (последний элемент)
 
-Console.WriteLine(num);
-Console.WriteLine((first*10) + last);
+Console.WriteLine(num); // выводи в консоль случайное число
+Console.WriteLine((first*10) + last); // выводим в консоль результат умножения первого элемента на 10 и сложения результата с последним элементом (результат их трехзачного числа получили двузначное)
 */
 
 /*
@@ -42,19 +42,19 @@ Console.WriteLine((first*10) + last);
 ● 16, 4 -> кратно
 */
 /*
-Console.Write("Введите первое число: ");
-int num1 = int.Parse(Console.ReadLine());
+Console.Write("Введите первое число: "); // Вывод в консоль предложения ввести первое число
+int num1 = int.Parse(Console.ReadLine()); // ввод через консоль первого числа
 
-Console.Write("Введите второе число: ");
-int num2 = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число: "); // вывод в консоль предложения ввести второе число
+int num2 = int.Parse(Console.ReadLine()); // ввод через консоль второго числа
 
-if (num2 % num1 == 0)
+if (num2 % num1 == 0) // проверяем кратность чисел
 {
-    Console.WriteLine("Второе число является кратным первому.");
+    Console.WriteLine("Второе число является кратным первому."); // если да
 }
 else
 {
-    Console.WriteLine("Второе число не кратно первому. Остаток от деления: " + (num2 % num1));
+    Console.WriteLine("Второе число не кратно первому. Остаток от деления: " + (num2 % num1)); // если нет
 }
 
 Console.ReadKey();
@@ -68,22 +68,22 @@ Console.ReadKey();
 ● 161 -> да
 */
 /*
-Console.WriteLine("Введите число 1:");
-int num1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите число 2:");
-int num2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число 1:"); // вывод в консоль предложения ввести первое число
+int num1 = int.Parse(Console.ReadLine()); // ввод в консоль первого числа
+Console.WriteLine("Введите число 2:"); // вывод в консоль предложения ввести второе число
+int num2 = int.Parse(Console.ReadLine()); // ввод в консоль второго числа
 
-if (num1 * num1 == num2)
+if (num1 * num1 == num2) // если число 2 является квадратом числа 1
 {
-    Console.WriteLine("Число 1 является квадратом числа 2");
+    Console.WriteLine("Число 1 является квадратом числа 2"); // вывод в консоль
 }
-else if (num2 * num2 == num1)
+else if (num2 * num2 == num1) // если
 {
-    Console.WriteLine("Число 2 является квадратом числа 1");
+    Console.WriteLine("Число 2 является квадратом числа 1"); //если число 1 является квадратом числа 2 
 }
 else
 {
-    Console.WriteLine("Числа не явдяются квадратами друг друга");
+    Console.WriteLine("Числа не явдяются квадратами друг друга"); // если первые два условия не выполнились
 }
 */
 /*
@@ -92,15 +92,15 @@ else
 ● 5, 25 -> да ● -4, 16 -> да ● 25, 5 -> да ● 8,9 -> нет
 */
 /*
-Console.WriteLine("Введите число:");
-int number = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число:"); // вывод в консоль предложения ввести число
+int number = int.Parse(Console.ReadLine()); // ввод в консоль числа
     
-if (number % 7 == 0 && number % 23 == 0)
+if (number % 7 == 0 && number % 23 == 0) // проверка является ли укзанное число кратным 7 и 23
 {
-    Console.WriteLine("Число кратно 7 и 23");
+    Console.WriteLine("Число кратно 7 и 23"); // если да
 }
 else
 {
-    Console.WriteLine("Число не кратно 7 и 23");
+    Console.WriteLine("Число не кратно 7 и 23"); // если нет
 }
 */

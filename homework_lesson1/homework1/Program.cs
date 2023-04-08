@@ -5,17 +5,17 @@ a = 2 b = 10 -> max = 10
 a = -9 b = -3 -> max = -3
 */
 
-Console.WriteLine("Введите число a");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число a"); // Вывод в консоль предложения ввести число
+int a = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-Console.WriteLine("Введите число b");
-int b = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число b"); // Вывод в консоль предложения ввести чсло
+int b = int.Parse(Console.ReadLine()); // Ввод числа
 
-if (a > b)
+if (a > b) // если a больше b
 {
-    Console.WriteLine("Число a больше числа b");
+    Console.WriteLine("Число a больше числа b"); // если да вывод в консоль
 }
 else
 {
-    Console.WriteLine("Число b больше числа a");
+    Console.WriteLine("Число b больше числа a"); // если нет вывод в консоль
 }

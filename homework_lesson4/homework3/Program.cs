@@ -6,46 +6,46 @@
 Вывод массива обязательно в виде [число, чилсо, ... ,число]
 */
 
-Console.WriteLine("Введите размер массива:");
-int sizearray = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите размер массива:"); // Вывод в консоль предложения ввести число
+int sizearray = int.Parse(Console.ReadLine()); // Ввод в консоль числа
 
-int[] array = new int[sizearray];
+int[] array = new int[sizearray]; // создание массива типа int с размеров введеным в консоли
 
-for (int i = 0; i < sizearray; i++)
+for (int i = 0; i < sizearray; i++) // цикл от i до размера массива
 {
-    Console.WriteLine($"Введите значение для элемента массива {i}:");
-    array[i] = int.Parse(Console.ReadLine());
+    Console.WriteLine($"Введите значение для элемента массива {i}:"); // вывод в консоль предложения ввести значение элемент массива
+    array[i] = int.Parse(Console.ReadLine()); // ввод в консоль значения элемента массива
 }
 
-PrintArray(array);
+PrintArray(array); // вызов метода вывода в консоль массива
 
 
 // Метод вывода массива в консоль
 void PrintArray (int[] array)
 {
-    if (array.Length != 0)
+    if (array.Length != 0) // условие если длина массива не равна 0
     {
 
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < array.Length; i++) // цикл от 0 до array.Length (длина массива)
         {
-            if (array.Length == 1)
+            if (array.Length == 1) // если массив имеет длину 1
             {
-                Console.Write($"[{array[i]}]");
+                Console.Write($"[{array[i]}]"); // вывод в консоль
             }
 
-            else if (i == 0)
+            else if (i == 0) // если i (номер элемента массива = 0 (первый элемент массива))
             {
-                Console.Write($"[{array[i]},");
+                Console.Write($"[{array[i]},"); // вывод в консоль
             }
 
-            else if (i == array.Length -1)
+            else if (i == array.Length -1) // если i (номер элемента массива = длина массива минус 1 (последний элемент массива))
             {
-                Console.Write($" {array[i]}]");
+                Console.Write($" {array[i]}]");//вывод в консоль
             }
             
-            else
+            else // во всех остальных случях (номер элемента массива не первый и не последний)
             {
-                Console.Write($" {array[i]},");
+                Console.Write($" {array[i]},"); // вывод в консоль
             }
         }
     }

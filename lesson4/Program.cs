@@ -3,23 +3,24 @@
 4 -> 24 5 -> 120
 */
 /*
-Console.WriteLine("Введите N:");
-int n = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите N:"); // вывод в консоль предложения ввести число
+int n = int.Parse(Console.ReadLine()); // ввод в консоль числа
 
-int result = GetComposition(n);
+int result = GetComposition(n); // создание переменной и запись в нее результата выполнения метода
 
-Console.WriteLine(result);
+Console.WriteLine(result); // вывод в консоль
 
+//Метод определения произведения чисел от 1 до N
 int GetComposition(int number)
 {
-    int result = 1;
+    int result = 1; // создание переменной типа int и приравнивание ее к единице
     
-    for(int i = 1; i <= number; i++)
+    for(int i = 1; i <= number; i++) // цикл от 1 до number
     {
-        result *= i;
+        result *= i; // запись в переменную результат умножения ее и i
     }
 
-    return result;
+    return result; // возврат полученного результата
     
 }
 */
@@ -30,13 +31,13 @@ int GetComposition(int number)
 [1,0,1,1,0,1,0,0]
 */
 
-Console.WriteLine("Введите N:");
-int stop = int.Parse(Console.ReadLine());
-int start = 1;
+Console.WriteLine("Введите N:"); // вывод в консоль предложения ввести число
+int stop = int.Parse(Console.ReadLine()); // ввод в консоль числа
+int start = 1; // создание переменной типа int и приравнивание ее к 1
 
-int[] arrayend = FillArray(start, stop);
+int[] arrayend = FillArray(start, stop); // создание массива типа int и запись в него результата выполнения метода
 
-PrintArray(arrayend);
+PrintArray(arrayend); // вызов метода вывода в консоль массива
 
 
 // Метод вывода в консоль массива
@@ -51,17 +52,17 @@ void PrintArray(int[] array)
 // Метод заполнения массива случайными числами (0, 1)
 int[] FillArray(int start, int stop)
 {
-    int[] array = new int[stop];
+    int[] array = new int[stop]; // создание массива с размерностью переданной переменной stop
 
-    Random random = new Random();
+    Random random = new Random(); // создание переменной типа Random
 
-    for (int i = start; i < stop; i++)
+    for (int i = start; i < stop; i++) // цикл от start до stop
     {
-        int randomValue = random.Next(0, 2);
-        array[i] = randomValue;
+        int randomValue = random.Next(0, 2); // создание переменной типа int и запись в нее случайного числа в указанном диапазоне
+        array[i] = randomValue; // запись в соответствующий i элемент массива случайного числа
     }
 
-    return array;
+    return array; // возврат из метода получившегося массива
 }
 
 
