@@ -13,7 +13,7 @@ int[] array = new int[sizearray];
 
 for (int i = 0; i < sizearray; i++)
 {
-    Console.WriteLine($"Введите значение для элемента массива {i+1}:");
+    Console.WriteLine($"Введите значение для элемента массива {i}:");
     array[i] = int.Parse(Console.ReadLine());
 }
 
@@ -25,6 +25,7 @@ void PrintArray (int[] array)
 {
     if (array.Length != 0)
     {
+
         for (int i = 0; i < array.Length; i++)
         {
             if (array.Length == 1)
