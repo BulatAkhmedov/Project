@@ -24,7 +24,7 @@ double[] GenerateArray(int length)
 
     for (int i = 0; i< length; i++) // цикл от i до length (размер массива)
     {
-        array[i] = random.Next(0, 10) / 10.0; // запись в массив случайного числа
+        array[i] = random.Next(0, 100) / 10.0; // запись в массив случайного числа
     }
 
     return array; // возврат массива как результат выполнения метода
@@ -33,7 +33,7 @@ double[] GenerateArray(int length)
 //Метод определения минимального значения в массиве
 double FindMinNumberArray (double[] array)
 {
-    double min = 0; // создаем переменную типа double и приравниваем ее к 0
+    double min = 100; // создаем переменную типа double и приравниваем ее к 0
 
     for(int i = 0; i < array.Length; i++) // цикл от i до array.Length (размер массива)
     {
