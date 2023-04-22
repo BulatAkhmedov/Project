@@ -7,7 +7,7 @@
 10 09 08 07
 */
 
-int[,] array = GenerateArray(4,4);
+int[,] array = GenerateArray(10,10);
 Print2DArray(array);
 
 
