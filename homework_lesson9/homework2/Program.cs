@@ -12,15 +12,14 @@ bool isParsedStop = int.TryParse(Console.ReadLine(), out int stop);
 
 if (!isParsedStart || !isParsedStop) { Console.WriteLine("Ошибка ввода, введено не число"); return;}
 
-Print(stop);
+Console.WriteLine(SummElement(start, stop));
 
-void Print(int n)
+int SummElement (int m, int n)
 {
-    if (start > stop) { return; }
-
-    Console.WriteLine(start);
-    start++;
     
-    Print(n);
+    if (n < m) { return 0; }
 
+    n--;
+
+    return SummElement(m, n) + n+1;
 }

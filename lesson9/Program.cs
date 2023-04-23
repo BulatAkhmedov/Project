@@ -106,7 +106,7 @@ int PowElement(int a, int b)
 // Рекурсивный метод проверки правильности ввода значения в консоль
 int IsParsedInt()
 {
-    
+        
     bool status = int.TryParse(Console.ReadLine(), out int a);
     if (status) {return a;}
     
